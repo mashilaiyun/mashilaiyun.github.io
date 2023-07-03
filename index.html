@@ -157,7 +157,7 @@
       
         <a class="archive-link" href="/archives/2023/07 ">
           July 2023 
-          <div class="archive-count">8 </div>
+          <div class="archive-count">11 </div>
         </a>
       
     </div>
@@ -172,23 +172,23 @@
       <ul>
         
           <li>
+            <a href="/2023/07/03/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1(RESTful%E3%80%81RPC%E3%80%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97)/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/07/03/%E5%B9%B2%E8%B4%A7%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2023/07/03/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Linux基础知识</a>
           </li>
         
           <li>
             <a href="/2023/07/03/shell/">shell</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/02/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/02/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/02/C-%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/">C++学习进阶</a>
           </li>
         
       </ul>
@@ -201,6 +201,279 @@
     </div>
     <div id="content-body">
       
+   
+
+<article id="post-数据通信(RESTful、RPC、消息队列)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2023/07/03/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1(RESTful%E3%80%81RPC%E3%80%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97)/">Untitled</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-07-03T14:04:10.300Z" itemprop="datePublished">2023-07-03</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    Uncategorized 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.6k words 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+RPC
+RPC（Remote Procedure Call）—远程过程调用 ，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。RPC协议假定某些传输协议的存在，如TCP或UDP，为通信程序之间携带信息数据。在OSI网络通信模型中，RPC跨越了传输层和应用层。RPC使得开发分布式程序就像开发本地程序一样简单。
+RPC采用客户端（服务调用方）&#x2F;服务器端（服务提供方）模式， 都运行在自己的JVM中。客户端只需要引入要使用的接口，接口的实现和运行都在服务器端。RPC主要依赖的技术包括序列化、反序列化和数据传输协议，这是一种定义与实现相分离的设计。
+目前Java使用比较多的RPC方案主要有RMI（JDK自带）、Hessian、Dubbo以及Thrift等。
+注意： RPC主要指内部服务之间的调用，RESTful也可以用于内部服务之间的调用，但其主要用途还在于外部系统提供服务，因此没有将其包含在本知识点内。
+常见RPC框架：
+RMI（JDK自带）： JDK自带的RPC
+ 详细内容可以参考：从懵逼到恍然大悟之Java中RMI的使用
+
+Dubbo: Dub...  
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2023/07/03/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1(RESTful%E3%80%81RPC%E3%80%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97)/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+ 
+
+   
+
+<article id="post-计算机网络" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2023/07/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">Untitled</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-07-03T14:04:10.160Z" itemprop="datePublished">2023-07-03</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    Uncategorized 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            7.3k words 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+
+
+一 OSI与TCP&#x2F;IP各层的结构与功能,都有哪些协议
+五层协议的体系结构
+1 应用层
+域名系统
+HTTP协议
+
+
+2 运输层
+运输层主要使用以下两种协议
+UDP 的主要特点
+TCP 的主要特点
+
+
+3 网络层
+4 数据链路层
+5 物理层
+总结一下
+
+
+二 TCP 三次握手和四次挥手(面试常客)
+为什么要三次握手
+为什么要传回 SYN
+传了 SYN,为啥还要传 ACK
+为什么要四次挥手
+
+
+三 TCP、UDP 协议的区别
+四 TCP 协议如何保证可靠传输
+停止等待协议
+自动重传请求 ARQ 协议
+连续ARQ协议
+滑动窗口
+流量控制
+拥塞控制
+
+
+五  在浏览器中输入url地址 -&gt;&gt; 显示主页的过程（面试常客）
+六 状态码
+七 各种协议与HTTP协议之间的关系
+八  HTTP长连接、短连接
+写在最后
+计算机网络常见问题回顾
+建议
+
+
+
+
+
+
+相对与上一个版本的计算机网路面试知识总结，这个版本增加了 “TCP协议如何保证可靠传输”包括超时重传、停止等待协议、滑动窗口、流量控制、拥塞控制等内容并且对一些已有内容做了补充。
+一 OSI与TCP&#x2F;IP...  
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2023/07/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+ 
+
+   
+
+<article id="post-干货：计算机网络知识总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2023/07/03/%E5%B9%B2%E8%B4%A7%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">Untitled</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-07-03T14:04:10.160Z" itemprop="datePublished">2023-07-03</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    Uncategorized 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            12k words 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+目录结构
+1. 计算机概述 2. 物理层 3. 数据链路层 4. 网络层 5. 运输层 6. 应用层一计算机概述（1），基本术语  结点 （node）：网络中的结点可以是计算机，集线器，交换机或路由器等。
+
+  链路（link  ）：从一个结点到另一个结点的一段物理线路。中间没有任何其他交点。
+
+ 主机（host）：连接在因特网上的计算机.
+
+ ISP（Internet Service Provider）：因特网服务提供者（提供商）.
+
+ IXP（Internet eXchange Point）：互联网交换点IXP的主要作用就是允许两个网络直接相连并交换分组，而不需要再通过第三个网络来转发分组。.
+
+ RFC(Request For Comments)意思是“请求评议”，包含了关于Internet几乎所有的重要的文字资料。
+
+ 广域网WAN（Wide Area Network）任务是通过长距离运送主机发送的数据
+
+ 城域网MAN（Metropolitan Area Network）用来讲多个局域网进行互连
+
+ 局域网LAN（Local Area Network） 学校或企业大多...  
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2023/07/03/%E5%B9%B2%E8%B4%A7%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+ 
+
    
 
 <article id="post-Linux基础知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -882,76 +1155,19 @@ C++ 是一种中级语言，它是由 Bjarne Stroustrup 于 1979 年在贝尔实
 
  
 
-   
 
-<article id="post-Markdown语法概述" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2023/07/02/Markdown%E8%AF%AD%E6%B3%95%E6%A6%82%E8%BF%B0/">Markdown语法概述</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2023-07-02T10:06:40.000Z" itemprop="datePublished">2023-07-02</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-    Uncategorized 
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            3.5k words 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            [TOC]
-[Markdown+Typora&#x2F;VSCode 超全教程]Sakiyary 2022&#x2F;7&#x2F;16
-😂 简要介绍Markdown 是一种轻量型标记语言, 是一种语法. 以 .md 结尾的文本文件就是 Markdown 文件. 相较于 Word, 它更加像是 HTML 语言或是 $\LaTeX$, 并不是最淳朴的那种”所见即所得”. 它处处透露着一种极简主义. 高效简洁清晰的同时, 又很简单. 看起来舒服, 语法简单, 尤其在处理纯文本上有很大的优势. 
-它相较于 Word, 兼容性非常高, 可以跨平台使用, 不用担心奇奇怪怪的版本兼容问题. 同时, 有许多网站都支持或正在使用 Markdown 语法. 如 Github (等一系列代码托管平台), StackOverflow(等答疑平台), 简书, 语雀 (等一系列笔记平台).
-📐 实际应用所有要写文本的时候都可以用上 Markdown!
-它可以让你不再纠结什么字体, 什么样式, 什么排版. 而且逻辑清晰, 层次分明.
-像我大一的时候就用 Markdown 来写各种笔记, 演讲稿, 课程论...  
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2023/07/02/Markdown%E8%AF%AD%E6%B3%95%E6%A6%82%E8%BF%B0/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
+  <nav id="page-nav">
+    <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
+    <a id="prev-btn" class="page-nav-btn disabled" href=" /  ">
+      <span class="material-symbols-rounded">navigate_before</span>
     </a>
-     
-  </div>
-  
-</article>
-
- 
-
+    <div id="num-bar">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a>  
+    </div>
+    <a id="next-btn" class="page-nav-btn " href="/page/2/">
+      <span class="material-symbols-rounded">navigate_next</span>
+    </a>
+  </nav>
 
 
     </div>
