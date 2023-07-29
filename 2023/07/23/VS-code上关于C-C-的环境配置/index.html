@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="学习总结">
+    <meta name="description" content="blog">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            VS code上关于C/C++的环境配置 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">VS code上关于C/C++的环境配置</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-23 20:25:29</span>
+        <span class="mobile">2023-07-23 20:25</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-23 20:26:57</span>
+    </span>
+    
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="VS-code-C-C-编译配置"><a href="#VS-code-C-C-编译配置" class="headerlink" title="VS code   C&#x2F;C++编译配置"></a>VS code   C&#x2F;C++编译配置</h1><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>前两天有同学问我如何用VScode搭建C语言的环境。</p>
+<p>接下来直接动手搭建C和C++的环境。</p>
+<h4 id="VS-Code简单介绍"><a href="#VS-Code简单介绍" class="headerlink" title="VS Code简单介绍"></a>VS Code简单介绍</h4><p>VS code是一个微软旗下的一个广受欢迎的开源文本编辑器，相较于其他编辑器，VS code有着非常多的优点而让开发者们对其爱不释手。</p>
+<blockquote>
+<p>比如炫酷的主题、漂亮的外观、集成了终端以及轻量级的体积等等等等，VS code最厉害的地方在于他有着成熟的插件市场（我们下面马上就要用到）以满足开发者的各种开发需求，得益于这个插件市场，我们可以把VS code打造成各种开发环境。</p>
+</blockquote>
+<p>VS code的下载也很简单，直接去官网下载安装即可。</p>
+<h4 id="MinGW简单介绍和下载配置"><a href="#MinGW简单介绍和下载配置" class="headerlink" title="MinGW简单介绍和下载配置"></a>MinGW简单介绍和下载配置</h4><p>需要注意的一点是，VS code只是一个文本编辑器，本质上和Windows的记事本是一个东西，它不是一个编译器，它只是一个编辑器，编辑器是无法编译运行程序的，这是编译器的工作。</p>
+<p>那么为了让我们能够在VS code里面编译并运行C&#x2F;CPP文件，我们需要去额外安装C和C++的编译器：GCC。</p>
+<p>Windows平台上的GCC移植版本是MinGW。我们用MinGW其实也就是用里面的GCC来编译我们写的C&#x2F;C++文件。</p>
+<p>进去之后，选择files：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBticvbVLkboZ38icP9yDKakNNJHFQOPmBjBBJWrDibBSdAwPfWbWR2MjOEg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>下载MinGW的压缩包：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtSXmplRpb6Y6Yx1L1ibEkzWXzF5v6cia1fw0wsofs5JyezcACqm7yx5YA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>下载过程由于是从外网下载，会比较慢，可以多试几次或者挂代理，另外根据笔者的经验来看外网的东西一般中午下载起来会比较快。</p>
+<p>下载好了之后把他放在一个没有中文和空格的目录下解压，然后配置环境变量。</p>
+<blockquote>
+<p>在Win10的搜索栏（快捷键win+S）搜索环境变量会弹出系统属性，点击环境变量——上方的用户变量里面找到Path——点击编辑——点击新建，然后把你的MinGW的bin路径复制进去（如：D:\development\MinGW\bin），然后一路确定。</p>
+</blockquote>
+<p>这样环境变量就配置好了，我们可以随便找一个路径打开一个cmd输入：gcc –version来验证一下：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtumvSe6bSoE6DCbYWjH8urskbEgTpz79ibSdMF8vm2XBIPITztv684rw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>接下来我们配置VScode</p>
+<h4 id="VScode配置"><a href="#VScode配置" class="headerlink" title="VScode配置"></a>VScode配置</h4><p>打开VScode，然后打开左边的插件市场，下载并安装两个插件：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtOP9X3rJ5ugqwdSAHs7lvunSjEedgQ0hNyhT4XAddOgG1MsXcicUYNlg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>● Chinese：中文汉化插件，VScode默认是英文界面，为了方便咱给他改成中文的。在搜索栏搜索Chinese，选则中文简体点击右下角的安装（我这里安装过了所以没有那个安装按钮）。</p>
+<p>● C&#x2F;C++：一款C&#x2F;C++语法高亮的代码插件。安装方式和Chinese一样。</p>
+<p>搞定之后我们来写一个C文件测试一下，点击左上角的文件——打开文件夹——选择一个空文件夹打开，然后右键——新建文件：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBteuxib55rIYernlqTGxmGA1bma85YHdiabfWssQSq1PMMzLFOyF3icZGJQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>随便起个名（如Hello.c），随便写点代码，比如经典的Hello World：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hello World!&quot;</span>);    </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们编译他，点击最上方的终端–&gt;配置默认生成任务（也可以用快捷键ctrl+shift+b）然后你会看到这样一个选项：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBt84cuNhDjic3QOeaSAcE2IoiahMl8UIOonztA7mscJdCr9mSIAfmuPhlg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这是让我们选择用什么来编辑这个文件，由于我们写的是C文件，应该用能够编译C文件的编译器（也就是我们上文配置的MinGW里面的GCC）。</p>
+<p>我们点击这里的C&#x2F;C++编辑器，然后就会发现我们这里生成了一个Hello.exe文件和 .vs code文件夹。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtQcIAsIwU6xNQBLiboQFXc06ibicBP1HRWtTgqVOq3icqeZYXCjdhcj6u7Q/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>打开一个终端（终端——新终端），输入.\Hello.exe来运行这个文件，你会发现终端成功输出Hello World，这代表成功运行。</p>
+<p>至于这个.vscode文件夹，是当前文件夹里的一些配置文件（比如这里的task.json，它其中写入了使用什么编译器，编译器的路径等信息）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;2.0.0&quot;,</span><br><span class="line">    &quot;tasks&quot;: [</span><br><span class="line">        &#123;//这个大括号里是‘构建（build）’任务</span><br><span class="line">            &quot;label&quot;: &quot;build&quot;, //任务名称，可以更改，不过不建议改</span><br><span class="line">            &quot;type&quot;: &quot;shell&quot;, //任务类型，process是vsc把预定义变量和转义解析后直接全部传给command；shell相当于先打开shell再输入命令，所以args还会经过shell再解析一遍</span><br><span class="line">            &quot;command&quot;: &quot;gcc&quot;, //编译命令，这里是gcc，编译c++的话换成g++</span><br><span class="line">            &quot;args&quot;: [    //方括号里是传给gcc命令的一系列参数，用于实现一些功能</span><br><span class="line">                &quot;$&#123;file&#125;&quot;, //指定要编译的是当前文件</span><br><span class="line">                &quot;-o&quot;, //指定输出文件的路径和名称</span><br><span class="line">                &quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;, //承接上一步的-o，让可执行文件输出到源码文件所在的文件夹下的bin文件夹内，并且让它的名字和源码文件相同</span><br><span class="line">                &quot;-g&quot;, //生成和调试有关的信息</span><br><span class="line">                //&quot;-Wall&quot;, // 开启额外警告</span><br><span class="line">                //&quot;-static-libgcc&quot;,  // 静态链接libgcc</span><br><span class="line">                &quot;-fexec-charset=GBK&quot;, // 生成的程序使用GBK编码，不加这一条会导致Win下输出中文乱码</span><br><span class="line">                &quot;-std=c11&quot;, // 语言标准，可根据自己的需要进行修改，写c++要换成c++的语言标准，比如c++11</span><br><span class="line">            ],</span><br><span class="line">            &quot;group&quot;: &#123;  //group表示‘组’，我们可以有很多的task，然后把他们放在一个‘组’里</span><br><span class="line">                &quot;kind&quot;: &quot;build&quot;,//表示这一组任务类型是构建</span><br><span class="line">                &quot;isDefault&quot;: true//表示这个任务是当前这组任务中的默认任务</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;presentation&quot;: &#123; //执行这个任务时的一些其他设定</span><br><span class="line">                &quot;echo&quot;: true,//表示在执行任务时在终端要有输出</span><br><span class="line">                &quot;reveal&quot;: &quot;always&quot;, //执行任务时是否跳转到终端面板，可以为always，silent，never</span><br><span class="line">                &quot;focus&quot;: false, //设为true后可以使执行task时焦点聚集在终端，但对编译来说，设为true没有意义，因为运行的时候才涉及到输入</span><br><span class="line">                &quot;panel&quot;: &quot;new&quot; //每次执行这个task时都新建一个终端面板，也可以设置为shared，共用一个面板，不过那样会出现‘任务将被终端重用’的提示，比较烦人 </span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;problemMatcher&quot;: &quot;$gcc&quot; //捕捉编译时编译器在终端里显示的报错信息，将其显示在vs code的‘问题’面板里</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;//这个大括号里是‘运行(run)’任务，一些设置与上面的构建任务性质相同</span><br><span class="line">            &quot;label&quot;: &quot;run&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;shell&quot;,</span><br><span class="line">            &quot;dependsOn&quot;: &quot;build&quot;, //任务依赖，因为要运行必须先构建，所以执行这个任务前必须先执行build任务，</span><br><span class="line">            &quot;command&quot;: &quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;, //执行exe文件，只需要指定这个exe文件在哪里就好</span><br><span class="line">            &quot;group&quot;: &#123;</span><br><span class="line">                &quot;kind&quot;: &quot;test&quot;, //这一组是‘测试’组，将run任务放在test组里方便我们用快捷键执行</span><br><span class="line">                &quot;isDefault&quot;: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;presentation&quot;: &#123;</span><br><span class="line">                &quot;echo&quot;: true,</span><br><span class="line">                &quot;reveal&quot;: &quot;always&quot;,</span><br><span class="line">                &quot;focus&quot;: true, //这个就设置为true了，运行任务后将焦点聚集到终端，方便进行输入</span><br><span class="line">                &quot;panel&quot;: &quot;new&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="调试程序"><a href="#调试程序" class="headerlink" title="调试程序"></a>调试程序</h4><p>接下来我们说调试，VS code的调试快捷键是 F5，按下 F5，会出现调试器选择界面：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtD8AeNkojQU2xkicIic6CDdtBicQzicywCTVuia849xTU9z4NlCyyxiaIJIfQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>选择GDB，再选择gcc，你会发现终端那里跳转到了调试控制台，并且 .vscode 文件夹下面又多了一个 launch.json 文件，上文我们已经说过了 .vscode文件夹存放当前工作文件夹的一些配置文件。</p>
+<blockquote>
+<p>例如task.json其实是编译运行的配置文件，这里的launch.json文件就是调试相关的配置文件，详解如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123; //这个大括号里是我们的‘调试(Debug)’配置</span><br><span class="line">            &quot;name&quot;: &quot;Debug&quot;, // 配置名称</span><br><span class="line">            &quot;type&quot;: &quot;cppdbg&quot;,  // 配置类型，cppdbg对应cpptools提供的调试功能；可以认为此处只能是cppdbg</span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,  // 请求配置类型，可以为launch（启动）或attach（附加）</span><br><span class="line">            &quot;program&quot;: &quot;$&#123;fileDirname&#125;\\bin\\$&#123;fileBasenameNoExtension&#125;.exe&quot;,  // 将要进行调试的程序的路径</span><br><span class="line">            &quot;args&quot;: [],  // 程序调试时传递给程序的命令行参数，这里设为空即可</span><br><span class="line">            &quot;stopAtEntry&quot;: false,  // 设为true时程序将暂停在程序入口处，相当于在main上打断点</span><br><span class="line">            &quot;cwd&quot;: &quot;$&#123;fileDirname&#125;&quot;,  // 调试程序时的工作目录，此处为源码文件所在目录</span><br><span class="line">            &quot;environment&quot;: [],  // 环境变量，这里设为空即可</span><br><span class="line">            &quot;externalConsole&quot;: false, // 为true时使用单独的cmd窗口，跳出小黑框；设为false则是用vscode的内置终端，建议用内置终端</span><br><span class="line">            &quot;internalConsoleOptions&quot;: &quot;neverOpen&quot;, // 如果不设为neverOpen，调试时会跳到“调试控制台”选项卡，新手调试用不到</span><br><span class="line">            &quot;MIMode&quot;: &quot;gdb&quot;, // 指定连接的调试器，gdb是minGW中的调试程序</span><br><span class="line">            &quot;miDebuggerPath&quot;: &quot;C:\\Program Files\\mingw64\\bin\\gdb.exe&quot;, // 指定调试器所在路径，如果你的minGW装在别的地方，则要改成你自己的路径，注意间隔是\\</span><br><span class="line">            &quot;preLaunchTask&quot;: &quot;build&quot; // 调试开始前执行的任务，我们在调试前要编译构建。与tasks.json的label相对应，名字要一样</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们来试着调试程序，按下 F9 是为当前所在行设置断点。当然你也可以将 launch.json 文件中的 “stopAtEntry”: false改为true。</p>
+<p>这样程序会在main函数开始暂停，相当于在main函数的起步打断点，进入调试之后 VS code 会给出一个调试工具，长这样：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/EHHQdUR0vqiaCPWltkFDa30a3PELlOmBtfcQKp8YiapMT0CjeVzaicTYYMw2tvFaWHnEvJPZxO7kRicja24OXYbfaQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>从左到右一次为：</p>
+<p>  ● 继续（F5）</p>
+<p>  ● 单步跳过（F10）</p>
+<p>  ● 单步调试（F11）</p>
+<p>  ● 单步跳出（shift+F11）</p>
+<p>  ● 重启（shift+ctrl+F5）</p>
+<p>  ● 停止（shift+F5）</p>
+<p>同时你可以在左边的变量区域监视变量变化情况，这些都是基本的调试功能，这里不再阐述。</p>
+<h4 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h4><p>到这里为止我们已经把 VS code 打造成了一个 C 和 C++ 的开发环境，并尝试了编译运行和调试。</p>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/07/23/hello-world/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/23/vim%E4%B8%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">vim上的一些使用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>

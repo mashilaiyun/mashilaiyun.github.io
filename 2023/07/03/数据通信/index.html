@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="学习总结">
+    <meta name="description" content="blog">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            数据通信 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">数据通信</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-07-03 22:06:51</span>
+        <span class="mobile">2023-07-03 22:06</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-07-03 22:07:45</span>
+    </span>
+    
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <blockquote>
+<h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2></blockquote>
+<p><strong>RPC（Remote Procedure Call）—远程过程调用</strong> ，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。RPC协议假定某些传输协议的存在，如TCP或UDP，为通信程序之间携带信息数据。在OSI网络通信模型中，RPC跨越了传输层和应用层。RPC使得开发分布式程序就像开发本地程序一样简单。</p>
+<p><strong>RPC采用客户端（服务调用方）&#x2F;服务器端（服务提供方）模式，</strong> 都运行在自己的JVM中。客户端只需要引入要使用的接口，接口的实现和运行都在服务器端。RPC主要依赖的技术包括序列化、反序列化和数据传输协议，这是一种定义与实现相分离的设计。</p>
+<p><strong>目前Java使用比较多的RPC方案主要有RMI（JDK自带）、Hessian、Dubbo以及Thrift等。</strong></p>
+<p><strong>注意： RPC主要指内部服务之间的调用，RESTful也可以用于内部服务之间的调用，但其主要用途还在于外部系统提供服务，因此没有将其包含在本知识点内。</strong></p>
+<h3 id="常见RPC框架："><a href="#常见RPC框架：" class="headerlink" title="常见RPC框架："></a>常见RPC框架：</h3><ul>
+<li><p><strong>RMI（JDK自带）：</strong> JDK自带的RPC</p>
+<p>详细内容可以参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/lmy86263/article/details/72594760" >从懵逼到恍然大悟之Java中RMI的使用<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><strong>Dubbo:</strong> Dubbo是 阿里巴巴公司开源的一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring框架无缝集成。</p>
+<p>详细内容可以参考：</p>
+<ul>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34337272/article/details/79862899" > 高性能优秀的服务框架-dubbo介绍<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/houshaolin/article/details/76408399" >Dubbo是什么？能做什么？<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Hessian：</strong> Hessian是一个轻量级的remotingonhttp工具，使用简单的方法提供了RMI的功能。 相比WebService，Hessian更简单、快捷。采用的是二进制RPC协议，因为采用的是二进制协议，所以它很适合于发送二进制数据。</p>
+<p>详细内容可以参考： <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/sunwei_pyw/article/details/74002351" >Hessian的使用以及理解<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><strong>Thrift：</strong>  Apache Thrift是Facebook开源的跨语言的RPC通信框架，目前已经捐献给Apache基金会管理，由于其跨语言特性和出色的性能，在很多互联网公司得到应用，有能力的公司甚至会基于thrift研发一套分布式服务框架，增加诸如服务注册、服务发现等功能。</p>
+<p>详细内容可以参考： <a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zeze/p/8628585.html" >【Java】分布式RPC通信框架Apache Thrift 使用总结<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h3 id="如何进行选择："><a href="#如何进行选择：" class="headerlink" title="如何进行选择："></a>如何进行选择：</h3><ul>
+<li><strong>是否允许代码侵入：</strong>  即需要依赖相应的代码生成器生成代码，比如Thrift。</li>
+<li><strong>是否需要长连接获取高性能：</strong>  如果对于性能需求较高的haul，那么可以果断选择基于TCP的Thrift、Dubbo。</li>
+<li><strong>是否需要跨越网段、跨越防火墙：</strong> 这种情况一般选择基于HTTP协议的Hessian和Thrift的HTTP Transport。</li>
+</ul>
+<p>此外，Google推出的基于HTTP2.0的gRPC框架也开始得到应用，其序列化协议基于Protobuf，网络框架使用的是Netty4,但是其需要生成代码，可扩展性也比较差。  </p>
+<blockquote>
+<h2 id="消息中间件"><a href="#消息中间件" class="headerlink" title="消息中间件"></a>消息中间件</h2></blockquote>
+<p><strong>消息中间件，也可以叫做中央消息队列或者是消息队列（区别于本地消息队列，本地消息队列指的是JVM内的队列实现）</strong>，是一种独立的队列系统，消息中间件经常用来解决内部服务之间的 <strong>异步调用问题</strong> 。请求服务方把请求队列放到队列中即可返回，然后等待服务提供方去队列中获取请求进行处理，之后通过回调等机制把结果返回给请求服务方。</p>
+<p>异步调用只是消息中间件一个非常常见的应用场景。此外，常用的消息队列应用场景还偷如下几个：</p>
+<ul>
+<li><strong>解耦 ：</strong> 一个业务的非核心流程需要依赖其他系统，但结果并不重要，有通知即可。</li>
+<li><strong>最终一致性 ：</strong> 指的是两个系统的状态保持一致，可以有一定的延迟，只要最终达到一致性即可。经常用在解决分布式事务上。</li>
+<li><strong>广播 ：</strong> 消息队列最基本的功能。生产者只负责生产消息，订阅者接收消息。</li>
+<li><strong>错峰和流控</strong></li>
+</ul>
+<p>具体可以参考： </p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34337272/article/details/80029918" >《消息队列深入解析》<i class="fas fa-external-link-alt"></i></a></p>
+<p>当前使用较多的消息队列有ActiveMQ（性能差，不推荐使用）、RabbitMQ、RocketMQ、Kafka等等，我们之前提高的redis数据库也可以实现消息队列，不过不推荐，redis本身设计就不是用来做消息队列的。</p>
+<ul>
+<li><p><strong>ActiveMQ：</strong> ActiveMQ是Apache出品，最流行的，能力强劲的开源消息总线。ActiveMQ是一个完全支持JMS1.1和J2EE 1.4规范的JMSProvider实现,尽管JMS规范出台已经是很久的事情了,但是JMS在当今的J2EE应用中间仍然扮演着特殊的地位。</p>
+<p>具体可以参考： </p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34337272/article/details/80031702" >《消息队列ActiveMQ的使用详解》<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><strong>RabbitMQ:</strong> RabbitMQ 是一个由 Erlang 语言开发的 AMQP 的开源实现。RabbitMQ 最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗</p>
+<blockquote>
+<p>AMQP ：Advanced Message Queue，高级消息队列协议。它是应用层协议的一个开放标准，为面向消息的中间件设计，基于此协议的客户端与消息中间件可传递消息，并不受产品、开发语言等条件的限制。</p>
+</blockquote>
+<p> 具体可以参考：</p>
+<p> <a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/79ca08116d57" >《消息队列之 RabbitMQ》<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p><strong>RocketMQ：</strong></p>
+<p>具体可以参考：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/824066d70da8" >《RocketMQ 实战之快速入门》<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://jm.taobao.org/2017/01/12/rocketmq-quick-start-in-10-minutes/" >《十分钟入门RocketMQ》<i class="fas fa-external-link-alt"></i></a> （阿里中间件团队博客）</p>
+</li>
+<li><p><strong>Kafka</strong>：Kafka是一个分布式的、可分区的、可复制的、基于发布&#x2F;订阅的消息系统,Kafka主要用于大数据领域,当然在分布式系统中也有应用。目前市面上流行的消息队列RocketMQ就是阿里借鉴Kafka的原理、用Java开发而得。</p>
+<p>具体可以参考：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://book.51cto.com/art/201801/565244.htm" >《Kafka应用场景》<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247484106&idx=1&sn=aa1999895d009d91eb3692a3e6429d18&chksm=fd9854abcaefddbd1101ca5dc2c7c783d7171320d6300d9b2d8e68b7ef8abd2b02ea03e03600#rd" >《初谈Kafka》<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<p><strong>推荐阅读：</strong></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU5OTMyODAyNg==&mid=2247484721&idx=1&sn=11e4e29886e581dd328311d308ccc068&chksm=feb7d144c9c058529465b02a4e26a25ef76b60be8984ace9e4a0f5d3d98ca52e014ecb73b061&scene=21#wechat_redirect" >《Kafka、RabbitMQ、RocketMQ等消息中间件的对比 —— 消息发送性能和区别》<i class="fas fa-external-link-alt"></i></a></p>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/07/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%EF%BC%88%E4%BA%8C%EF%BC%89/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">计算机网络（二）</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/07/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">计算机网络基础</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>
